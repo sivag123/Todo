@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   get 'user/login'
 
-  get 'task/home'
+  get 'task/home' => 'task#home'
+
+  get 'task/new' => 'task#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
