@@ -7,8 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header >
+	<nav id="header" class="navbar navbar-default navbar-fixed-top">
+  		<div class="container">
+  			<a href="#" class="navbar-brand"> Todo App </a>
+    		<ul class="nav navbar-nav navbar-right">
+    			<li><a class="navbar-link" href="#">Home</a></li>
+    			<li><a class="navbar-link" href="#">About</a></li>
+    			<li><a class="navbar-link" href="#">Login</a></li>
+    			<li><a class="navbar-link" href="#">Signup</a></li>
+    		</ul>
+  		</div>
+	</nav>
+</header>
 
-<%= yield %>
+<div class="container">
+	<%= yield %>
+</div>
+
+<footer class="footer nav navbar-default navbar-fixed-bottom">
+    This is a sample app created during bootcamp!
+</footer>
 
 </body>
 </html>

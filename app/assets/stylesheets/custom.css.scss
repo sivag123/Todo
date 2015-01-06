@@ -1,2 +1,49 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
+$icon-font-path: "/assets/";
+body{
+	padding-top:85px;
+	background-color:#c8f7c5;
+}
+
+.navbar-default{
+	border-color:#90c695;
+}
+
+#header{
+	background-color:#90c695;	
+	box-shadow: 0px -6px 42px 4px rgba(33,33,33,1);
+}
+.menu_elements{
+	color:#fff;
+}
+
+.footer {
+  margin-top: 45px;
+  padding-top: 25px;
+  padding-bottom:25px;
+  padding-left:25px;
+  border-top: 1px solid #90c695;
+  background-color:#90c695;
+  box-shadow: 0px 3px 42px 4px rgba(33,33,33,1);
+}
+
+footer small {
+  float: left;
+}
+
+#signup_form{
+	padding: 10px 250px 15px 250px;
+	margin-right:125px;
+	margin-left:125px;
+	background-color:#87d37c;
+	box-shadow: 0px 6px 28px 5px rgba(33,33,33,1);
+}
+#login_form{
+	float:right;
+	background-color:#87d37c;
+	box-shadow: 0px 6px 28px 5px rgba(33,33,33,1);
+}
+#banner{
+	
+}
