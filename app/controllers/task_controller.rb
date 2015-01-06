@@ -13,6 +13,7 @@ class TaskController < ApplicationController
 	end	
   end
 
+
   def home
   	@task_array=Task.all
   end
