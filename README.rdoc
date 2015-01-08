@@ -1,4 +1,4 @@
-THis is a sample app which is being done by me and Siva G.
+THis is a sample app which is being done by me and Prasanna.
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
