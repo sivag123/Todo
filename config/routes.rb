@@ -9,9 +9,19 @@ Rails.application.routes.draw do
 
   root "user#login"
 
-  get 'task/home' => 'task#home'
+  post 'task' => 'task#new'
 
-  get 'task/new' => 'task#new'
+  post 'task' =>'task#update'
+
+  post 'task/update' => 'task#update'
+
+  get 'task' => 'task#home'
+
+  post 'task/new' =>'task#new'
+
+  post 'task/delete' => 'task#delete'
+
+  get 'task/delete' => 'task#delete'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

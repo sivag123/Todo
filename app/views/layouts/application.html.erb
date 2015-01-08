@@ -21,6 +21,9 @@
 	</nav>
 </header>
 
+<%= flash[:success] if flash[:success]!=nil %>
+  <%= flash[:danger] if flash[:danger]!=nil %>
+  
 <div class="container">
 	<%= yield %>
 </div>
