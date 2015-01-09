@@ -2,10 +2,14 @@ Rails.application.routes.draw do
 
   get '/signup' => "user#signup"
 
+  post '/users' => "user#create"
+
   get '/login' => "user#login"
 
 
   get '/home' => "user#login"
+
+
 
   root "user#login"
 

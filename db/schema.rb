@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150108060301) do
 
-  create_table "lhma_2015_01_08_11_36_06_883_users", force: :cascade do |t|
+  create_table "lhma_2015_01_09_14_16_23_235_users", force: :cascade do |t|
     t.string   "username",        limit: 255
     t.string   "password_digest", limit: 255
     t.string   "email",           limit: 255
