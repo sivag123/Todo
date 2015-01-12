@@ -8,24 +8,39 @@ class UserController < ApplicationController
 
  	if @user!=nil
  		if @user.save
+      session[:userid]=@user.id
  			flash[:success]=@user
+      redirect_to "/task"
  		else
  			flash[:danger]="user unsuccesful"
  		end
  	end
 
- 	redirect_to "/login" 
+ 	
   end
 
   def login
-  	session[:userid]=params[:id]
+    @user=User.new
+  end
 
-  	#flash[:success]=session[:userid]
+  def login_auth
+    @user=User.find_by(email: login_params[:email])
+    if @user && @user.authenticate(login_params[:password])
+  	  session[:userid]=@user.id
+      redirect_to "/task"
+    else
+      flash[:danger]="Username not registered . please signup"
+      redirect_to "/signup"
+    end
   end
   
 
 
   private
+
+  def login_params
+    params.require(:user).permit(:email,:password)
+  end
 
   def user_params
   	params.require(:user).permit(:username,:email,:password,:password_confirmation)

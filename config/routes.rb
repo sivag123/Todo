@@ -6,10 +6,9 @@ Rails.application.routes.draw do
 
   get '/login' => "user#login"
 
-
   get '/home' => "user#login"
 
-
+  post '/login' =>"user#login_auth"
 
   root "user#login"
 

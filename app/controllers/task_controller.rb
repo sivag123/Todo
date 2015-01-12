@@ -1,7 +1,7 @@
 class TaskController < ApplicationController
   def new
     @task=Task.new(task_params)
-    @task.update_attributes(user_id: 1)
+    @task.update_attributes(user_id: session[:userid])
     
     if !@task.valid?
       flash.now[:danger]=@task.errors.full_messages
@@ -18,8 +18,13 @@ class TaskController < ApplicationController
 
 
   def home
-     @task=Task.new
-  	 @task_array=Task.all
+    if(session[:userid] !=nil)
+      @user=User.find(session[:userid])
+      @task=Task.new
+  	  @task_array=Task.where("user_id=?",session[:userid])
+    else
+      redirect_to "/home"
+    end
   end
 
 
