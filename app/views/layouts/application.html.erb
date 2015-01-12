@@ -16,6 +16,9 @@
     			<li><a class="navbar-link" href="#">About</a></li>
     			<li><a class="navbar-link" href= "/login">Login</a></li>
     			<li><a class="navbar-link" href= "/signup">Signup</a></li>
+          <% if session[:userid]!=nil %>
+            <li><a class="navbar-link" href= "/login" id=top>Logout</a></li>
+          <%end%>
     		</ul>
   		</div>
 	</nav>

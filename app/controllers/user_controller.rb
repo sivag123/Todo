@@ -21,6 +21,7 @@ class UserController < ApplicationController
 
   def login
     @user=User.new
+    session[:userid]=nil
   end
 
   def login_auth
